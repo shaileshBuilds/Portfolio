@@ -106,8 +106,8 @@ addEventListener('scroll', () => { const h = document.documentElement; $('#progr
 
 /* ---------- Journey timeline ---------- */
 const journey = [
-  ['2017 – 2019','Art & Design','R.S.M Intermediate College','Where my eye for layout, colour and spacing began. 75%.','🎨'],
-  ['2019 – 2021','Intermediate','Krishak Intermediate College','Built the academic base and found my interest in technology. 76%.','📘'],
+  // ['2017 – 2019','Art & Design','R.S.M Intermediate College','Where my eye for layout, colour and spacing began. 75%.','🎨'],
+  // ['2019 – 2021','Intermediate','Krishak Intermediate College','Built the academic base and found my interest in technology. 76%.','📘'],
   ['2021 – 2025','B.Tech, Information Technology','Abdul Kalam Technical University','Learned programming, then HTML, CSS, JavaScript and Tailwind. 7.2 CGPA.','🎓'],
   ['2025','Projects & Practice','E-Commerce site, Service Booking app','Built real projects: cart logic, filtering, forms, plus Node.js and MongoDB basics.','🛠️'],
   ['Dec 2025 – Jul 2026','Web Developer','Alphaxite Technologies','Shipped responsive sites, fixed cross-browser bugs and helped with deployment.','💼'],
