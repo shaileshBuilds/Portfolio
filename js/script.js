@@ -1,5 +1,5 @@
 const $ = s => document.querySelector(s);
-const nav = ['Home','About','Journey','Skills','Projects','Gallery','Services','Experience','Contact'];
+const nav = ['Home','About','Journey','Skills','Projects','Services','Experience','Contact'];
 nav.forEach(n => {
   const a = `<a href="#${n.toLowerCase()}" class="block py-2 hover:text-indigo-600 dark:hover:text-indigo-400">${n}</a>`;
   $('#links').insertAdjacentHTML('beforeend', `<li>${a}</li>`);
@@ -75,8 +75,8 @@ $('#mq').innerHTML = [...mqItems, ...mqItems].map(x => `<span class="px-4 py-1.5
   $('#bars').insertAdjacentHTML('beforeend', `<div><div class="flex justify-between text-sm font-medium mb-1.5"><span>${s[0]}</span><span>${s[1]}%</span></div><div class="bar"><span data-w="${s[1]}"></span></div></div>`));
 
 // gallery (images/gallery-1.jpg ... gallery-6.jpg)
-const gg = ['from-indigo-500 to-indigo-400','from-indigo-700 to-indigo-500','from-indigo-400 to-indigo-700','from-indigo-400 to-indigo-600','from-indigo-400 to-indigo-700','from-indigo-700 to-indigo-600'];
-gg.forEach((c, i) => $('#gal').insertAdjacentHTML('beforeend', `<div class="gal tilt card3d bg-gradient-to-br ${c}"><span>Image ${i+1}</span><img src="images/gallery-${i+1}.jpg" alt="Gallery image ${i+1}" loading="lazy" onerror="this.remove()"><div class="shine"></div></div>`));
+// const gg = ['from-indigo-500 to-indigo-400','from-indigo-700 to-indigo-500','from-indigo-400 to-indigo-700','from-indigo-400 to-indigo-600','from-indigo-400 to-indigo-700','from-indigo-700 to-indigo-600'];
+// gg.forEach((c, i) => $('#gal').insertAdjacentHTML('beforeend', `<div class="gal tilt card3d bg-gradient-to-br ${c}"><span>Image ${i+1}</span><img src="images/gallery-${i+1}.jpg" alt="Gallery image ${i+1}" loading="lazy" onerror="this.remove()"><div class="shine"></div></div>`));
 
 // profile photo preview (local only)
 $('#pick').onchange = e => { const f = e.target.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => { const im = $('#profileImg'); im.src = r.result; im.style.display = 'block'; }; r.readAsDataURL(f); };
