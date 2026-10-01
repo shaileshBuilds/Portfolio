@@ -1,0 +1,736 @@
+:root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px)
+}
+
+html {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 72px)
+}
+
+body {
+    background: #f8fafc;
+    overflow-x: hidden
+}
+
+html.dark body {
+    background: #050505
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Space Grotesk', 'Inter', sans-serif
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: none
+}
+
+.grad-text {
+    background: linear-gradient(90deg, rgb(var(--c500)), rgb(var(--g2)), rgb(var(--g3)), rgb(var(--c500)));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: flow 6s linear infinite
+}
+
+@keyframes flow {
+    to {
+        background-position: 200% center
+    }
+}
+
+#progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, rgb(var(--c500)), rgb(var(--g2)), rgb(var(--g3)));
+    z-index: 60
+}
+
+#glow {
+    position: fixed;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(circle, rgb(var(--c500) / .16), transparent 65%);
+    transform: translate(-50%, -50%);
+    left: -999px;
+    top: -999px
+}
+
+main, header, footer {
+    position: relative;
+    z-index: 1
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: .35;
+    animation: float 9s ease-in-out infinite
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-24px)
+    }
+}
+
+.caret {
+    display: inline-block;
+    width: 3px;
+    height: 1.1em;
+    background: rgb(var(--c500));
+    margin-left: 3px;
+    vertical-align: -.15em;
+    animation: blink 1s steps(1) infinite
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+/* 3D */
+.persp {
+    perspective: 1100px
+}
+
+.tilt {
+    transform-style: preserve-3d;
+    transition: transform .15s ease-out;
+    will-change: transform
+}
+
+.tilt>.pop {
+    transform: translateZ(40px)
+}
+
+.card3d {
+    transition: transform .15s ease-out, box-shadow .3s, border-color .3s
+}
+
+.card3d:hover {
+    box-shadow: 0 25px 45px -18px rgb(var(--c500) / .45);
+    border-color: rgb(var(--c400))
+}
+
+.shine {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .28), transparent 45%);
+    opacity: 0;
+    transition: opacity .3s
+}
+
+.card3d:hover .shine, .photo:hover .shine {
+    opacity: 1
+}
+
+.bar {
+    height: 8px;
+    border-radius: 99px;
+    background: rgb(var(--c500) / .15);
+    overflow: hidden
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 99px;
+    background: linear-gradient(90deg, rgb(var(--c500)), rgb(var(--g2)));
+    transition: width 1.4s cubic-bezier(.2, .8, .2, 1)
+}
+
+.gal {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    aspect-ratio: 4/3;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 600
+}
+
+.gal img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s
+}
+
+.gal:hover img {
+    transform: scale(1.12)
+}
+
+.marquee {
+    display: flex;
+    gap: .75rem;
+    width: max-content;
+    animation: mq 30s linear infinite
+}
+
+@keyframes mq {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+.jin {
+    opacity: 0;
+    transform: translateX(-40px) rotateY(12deg);
+    transition: opacity .7s ease, transform .7s ease
+}
+
+.jin.r {
+    transform: translateX(40px) rotateY(-12deg)
+}
+
+.jin.show {
+    opacity: 1;
+    transform: none
+}
+
+.jdot {
+    position: absolute;
+    top: 1.4rem;
+    left: 19px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    background: #fff;
+    border: 4px solid rgb(var(--c500));
+    z-index: 2;
+    transition: .4s
+}
+
+@media(min-width:768px) {
+    .jdot {
+        left: 50%
+    }
+}
+
+html.dark .jdot {
+    background: #050505
+}
+
+.jin.show .jdot {
+    box-shadow: 0 0 0 6px rgb(var(--c500) / .2);
+    animation: pulse 2.4s ease-in-out infinite
+}
+
+.jin .jdot {
+    opacity: 1
+}
+
+@keyframes pulse {
+    50% {
+        box-shadow: 0 0 0 12px rgb(var(--c500) / 0)
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    * {
+        animation: none !important;
+        transition: none !important
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.stage {
+    position: relative;
+    aspect-ratio: 1/1.08;
+    width: 100%
+}
+
+.frame {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgb(var(--c500) / .35);
+    background: radial-gradient(ellipse at 50% 90%, rgb(var(--c500) / .4), transparent 62%), #050505;
+    box-shadow: 0 0 90px -25px rgb(var(--c500) / .6)
+}
+
+.frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom
+}
+
+.topline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgb(var(--c300)), transparent);
+    animation: sweep 4s ease-in-out infinite alternate
+}
+
+@keyframes sweep {
+    to {
+        left: 60%
+    }
+}
+
+.cn {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 2px solid rgb(var(--c500));
+    z-index: 2
+}
+
+.cn.tl {
+    top: 20px;
+    left: 20px;
+    border-right: 0;
+    border-bottom: 0
+}
+
+.cn.tr {
+    top: 20px;
+    right: 20px;
+    border-left: 0;
+    border-bottom: 0
+}
+
+.cn.bl {
+    bottom: 20px;
+    left: 20px;
+    border-right: 0;
+    border-top: 0
+}
+
+.cn.br {
+    bottom: 20px;
+    right: 20px;
+    border-left: 0;
+    border-top: 0
+}
+
+.statbox, .tagbox {
+    position: absolute;
+    z-index: 3;
+    background: rgba(8, 8, 8, .92);
+    border: 1px solid rgb(var(--c500) / .4);
+    color: #fff;
+    transform: translateZ(60px);
+    backdrop-filter: blur(6px);
+    animation: float 6s ease-in-out infinite
+}
+
+.statbox {
+    top: 9%;
+    right: -4%;
+    padding: .1rem .3rem;
+    text-align: center
+}
+
+.statbox b {
+    display: block;
+    font: 700 2rem/1.1 'Space Grotesk', sans-serif
+}
+
+.statbox b i {
+    color: rgb(var(--c500));
+    font-style: normal
+}
+
+.statbox span {
+    font-size: .62rem;
+    letter-spacing: .25em;
+    color: #a3a3a3
+}
+
+.tagbox {
+    left: -4%;
+    bottom: 6%;
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    padding: .8rem 1.2rem;
+    animation-delay: -3s
+}
+
+.tagbox b {
+    display: block;
+    font-weight: 600
+}
+
+.tagbox span {
+    font-size: .8rem;
+    color: #a3a3a3
+}
+
+.tagbox .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgb(var(--c500));
+    box-shadow: 0 0 12px rgb(var(--c500));
+    animation: blink 1.6s ease-in-out infinite
+}
+
+.ptag {
+    font-size: .7rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    padding: .4rem 1rem;
+    border-radius: 99px;
+    border: 1px solid rgb(var(--c500) / .45);
+    background: rgb(var(--c500) / .08);
+    color: rgb(var(--c600));
+    font-weight: 600
+}
+
+html.dark .ptag {
+    color: rgb(var(--c400))
+}
+
+.statgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid rgb(var(--c500) / .25);
+    max-width: 30rem
+}
+
+.statgrid>div {
+    padding: 1rem .5rem;
+    text-align: center
+}
+
+.statgrid>div+div {
+    border-left: 1px solid rgb(var(--c500) / .25)
+}
+
+.statgrid span {
+    font-size: .62rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #737373
+}
+
+#accents {
+    position: fixed;
+    right: max(14px, env(safe-area-inset-right, 0px));
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    z-index: 70;
+    display: flex;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 99px;
+    background: rgba(10, 10, 10, .85);
+    border: 1px solid rgba(255, 255, 255, .12);
+    backdrop-filter: blur(8px)
+}
+
+#accents button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform .2s
+}
+
+#accents button:hover {
+    transform: scale(1.25)
+}
+
+#accents button.on {
+    border-color: #fff
+}
+
+/* ---- gradient + background elements ---- */
+body {
+    position: relative
+}
+
+html.dark body {
+    background: radial-gradient(55% 40% at 12% 0%, rgb(var(--c500)/.20), transparent 70%), radial-gradient(45% 35% at 95% 35%, rgb(var(--g2)/.16), transparent 70%), radial-gradient(50% 40% at 5% 80%, rgb(var(--g3)/.14), transparent 70%), #050505;
+    background-attachment: fixed
+}
+
+html:not(.dark) body {
+    background: radial-gradient(55% 40% at 12% 0%, rgb(var(--c500)/.12), transparent 70%), radial-gradient(45% 35% at 95% 35%, rgb(var(--g2)/.10), transparent 70%), #f8fafc;
+    background-attachment: fixed
+}
+
+#bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0
+}
+
+#bg .grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(127, 127, 127, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 127, 127, .08) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: linear-gradient(#000 0, transparent 35%, #000 50%, transparent 85%);
+    mask-image: linear-gradient(#000 0, transparent 35%, #000 50%, transparent 85%)
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .28;
+    background: linear-gradient(135deg, rgb(var(--c500)), rgb(var(--g2)), rgb(var(--g3)));
+    animation: drift 16s ease-in-out infinite alternate
+}
+
+@keyframes drift {
+    to {
+        transform: translate(60px, -50px) scale(1.15)
+    }
+}
+
+.sh {
+    position: absolute;
+    opacity: .55
+}
+
+.sh>svg {
+    display: block;
+    animation: bob var(--d, 9s) ease-in-out infinite alternate
+}
+
+.sh.sp>svg {
+    animation: spin2 var(--d, 22s) linear infinite
+}
+
+@keyframes bob {
+    from {
+        transform: translateY(-14px) rotate(-6deg)
+    }
+
+    to {
+        transform: translateY(14px) rotate(8deg)
+    }
+}
+
+@keyframes spin2 {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.h-1.w-12, .btn-grad {
+    background: linear-gradient(90deg, rgb(var(--c500)), rgb(var(--g2))) !important
+}
+
+.btn-grad:hover {
+    filter: brightness(1.12)
+}
+
+.topline {
+    background: linear-gradient(90deg, transparent, rgb(var(--g2)), transparent) !important
+}
+
+.frame {
+    background: radial-gradient(ellipse at 50% 90%, rgb(var(--c500)/.45), transparent 62%), radial-gradient(ellipse at 15% 10%, rgb(var(--g3)/.25), transparent 55%), #050505 !important
+}
+
+.bigtxt {
+    position: absolute;
+    white-space: nowrap;
+    font: 700 clamp(90px, 15vw, 220px)/1 'Space Grotesk', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(var(--c500)/.28);
+    opacity: .55;
+    will-change: transform;
+    user-select: none
+}
+
+#pts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0
+}
+
+#pts i {
+    position: absolute;
+    bottom: -12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgb(var(--c500)), rgb(var(--g2)));
+    box-shadow: 0 0 10px rgb(var(--c500)/.8);
+    opacity: 0;
+    animation: rise linear infinite
+}
+
+@keyframes rise {
+    10% {
+        opacity: .8
+    }
+
+    to {
+        transform: translate(var(--dx), -110vh);
+        opacity: 0
+    }
+}
+
+/* ---- Journey: magnet ---- */
+#jr .card3d {
+    translate: calc(var(--m, 0) * 14px * var(--dir, 1) + var(--hx, 0px)) var(--hy, 0px);
+    transition: transform .15s ease-out, translate .35s ease-out, box-shadow .3s, border-color .3s
+}
+
+.jin.r {
+    --dir: -1
+}
+
+@media(max-width:767px) {
+    .jin {
+        --dir: -1
+    }
+}
+
+.jin .jdot {
+    transform: translate(-50%, 0) scale(calc(1 + var(--m, 0) * .7));
+    translate: var(--dx, 0px) var(--dy, 0px);
+    transition: transform .3s, translate .25s, box-shadow .4s
+}
+
+.jin.mag .card3d {
+    border-color: rgb(var(--c500));
+    box-shadow: 0 0 0 1px rgb(var(--c500)/.5), 0 22px 50px -15px rgb(var(--c500)/.65)
+}
+
+.jin.mag .jdot::before, .jin.mag .jdot::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid rgb(var(--c500));
+    animation: ripple 1.8s ease-out infinite
+}
+
+.jin.mag .jdot::after {
+    animation-delay: .9s
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(1);
+        opacity: .9
+    }
+
+    to {
+        transform: scale(4.2);
+        opacity: 0
+    }
+}
+
+#jorb {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #fff, rgb(var(--c500)) 55%, rgb(var(--g2)));
+    box-shadow: 0 0 18px 4px rgb(var(--c500)/.8);
+    z-index: 3
+}
+
+#jorb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgb(var(--c500));
+    animation: ripple 2.2s ease-out infinite
+}
+
+#jorb::after {
+    content: '🧲';
+    position: absolute;
+    left: 26px;
+    top: -3px;
+    font-size: 18px
+}
+
+#jbg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1
+}
+
+.jfield {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    border: 1.5px dashed rgb(var(--c500)/.28);
+    transform: translate(-50%, -50%);
+    animation: spinr linear infinite
+}
+
+@keyframes spinr {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+
+.streak {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 260px;
+    background: linear-gradient(90deg, transparent, rgb(var(--c500)), rgb(var(--g2)), transparent);
+    opacity: .55;
+    animation: streak linear infinite
+}
+
+@keyframes streak {
+    from {
+        transform: translateX(-300px)
+    }
+
+    to {
+        transform: translateX(105vw)
+    }
+}

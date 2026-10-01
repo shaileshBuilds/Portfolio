@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+<defs>
+<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<radialGradient id="r" cx=".8" cy="1" r=".9"><stop offset="0" stop-color="#06b6d4" stop-opacity=".45"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="360" fill="#050505"/><rect width="1200" height="360" fill="url(#r)"/>
+<rect x="1" y="1" width="1198" height="358" fill="none" stroke="#06b6d4" stroke-opacity=".35"/>
+<rect x="0" y="0" width="300" height="3" fill="url(#g)"><animate attributeName="x" values="0;900;0" dur="6s" repeatCount="indefinite"/></rect>
+<g fill="none" stroke="#06b6d4" stroke-width="2"><path d="M30 60V30h30"/><path d="M1170 60V30h-30"/><path d="M30 300v30h30"/><path d="M1170 300v30h-30"/></g>
+<g transform="translate(930 80)" fill="none" stroke="#22d3ee" stroke-width="2" opacity=".9">
+<path d="M0 60L100 0l100 60v120l-100 60L0 180z" fill="#06b6d4" fill-opacity=".08"/><path d="M0 60l100 60 100-60M100 120v120"/>
+<animateTransform attributeName="transform" type="translate" values="930 80;930 66;930 80" dur="5s" repeatCount="indefinite"/></g>
+<text x="70" y="120" font-family="Arial,sans-serif" font-size="22" letter-spacing="6" fill="#22d3ee">FRONTEND DEVELOPER</text>
+<text x="70" y="205" font-family="Arial,sans-serif" font-size="82" font-weight="700" fill="#fff">Shailesh <tspan fill="url(#g)">Chauhan</tspan></text>
+<text x="70" y="255" font-family="Arial,sans-serif" font-size="24" fill="#a3a3a3">Responsive • Animated • 3D portfolio</text>
+<g font-family="Arial,sans-serif" font-size="18" fill="#e5e5e5">
+<rect x="70" y="285" width="90" height="36" rx="18" fill="none" stroke="#06b6d4"/><text x="90" y="309">HTML</text>
+<rect x="175" y="285" width="90" height="36" rx="18" fill="none" stroke="#06b6d4"/><text x="200" y="309">CSS</text>
+<rect x="280" y="285" width="130" height="36" rx="18" fill="none" stroke="#06b6d4"/><text x="298" y="309">JavaScript</text>
+<rect x="425" y="285" width="100" height="36" rx="18" fill="none" stroke="#06b6d4"/><text x="443" y="309">Tailwind</text></g>
+</svg>
