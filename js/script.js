@@ -18,7 +18,7 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
 
 const projects = [
   ['E-Commerce Product Website','Product listing with search, category filtering, a shopping cart UI and a fully responsive layout.',['HTML','CSS','JavaScript','Tailwind CSS'],'','from-indigo-500 to-indigo-400'],
-  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="/images/portpholio.png"/>','from-indigo-700 to-indigo-500'],
+  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="./images/portpholio.png"/>','from-indigo-700 to-indigo-500'],
   ['AquaCare Tank Cleaning Website','Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',['HTML','CSS','JavaScript','Tailwind CSS'],'💧','from-indigo-400 to-indigo-700'],
   ['WordPress Business Website','Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',['WordPress','Responsive Design','SEO Basics'],'🌐','from-indigo-400 to-indigo-600']
 ];
