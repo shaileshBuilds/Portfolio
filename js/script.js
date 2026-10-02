@@ -17,8 +17,8 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
   $('#basic').insertAdjacentHTML('beforeend', `<span class="${chip}bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:-translate-y-0.5 transition">${s}</span>`));
 
 const projects = [
-  ['E-Commerce Product Website','Product listing with search, category filtering, a shopping cart UI and a fully responsive layout.',['HTML','CSS','JavaScript','Tailwind CSS'],'🛒','from-indigo-500 to-indigo-400'],
-  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'💼','from-indigo-700 to-indigo-500'],
+  ['E-Commerce Product Website','Product listing with search, category filtering, a shopping cart UI and a fully responsive layout.',['HTML','CSS','JavaScript','Tailwind CSS'],'','from-indigo-500 to-indigo-400'],
+  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="/images/portpholio_project_.png"/>','from-indigo-700 to-indigo-500'],
   ['AquaCare Tank Cleaning Website','Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',['HTML','CSS','JavaScript','Tailwind CSS'],'💧','from-indigo-400 to-indigo-700'],
   ['WordPress Business Website','Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',['WordPress','Responsive Design','SEO Basics'],'🌐','from-indigo-400 to-indigo-600']
 ];
@@ -30,8 +30,8 @@ projects.forEach((p,i) => $('#proj').insertAdjacentHTML('beforeend', `
     <p class="mt-2 text-sm leading-relaxed">${p[1]}</p>
     <div class="mt-3 flex flex-wrap gap-1.5">${p[2].map(t => `<span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800">${t}</span>`).join('')}</div>
     <div class="mt-5 flex gap-3">
-      <a href="#" data-demo class="px-4 py-2 text-sm rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium">Live Demo</a>
-      <a href="#" data-gh class="px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+      <a href="https://shaileshbuilds.github.io/Portfolio/" data-demo class="px-4 py-2 text-sm rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium">Live Demo</a>
+      <a href="https://github.com/shaileshBuilds/Portfolio" data-gh class="px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
     </div>
   </div>
 </article>`));
