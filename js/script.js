@@ -17,8 +17,8 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
   $('#basic').insertAdjacentHTML('beforeend', `<span class="${chip}bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:-translate-y-0.5 transition">${s}</span>`));
 
 const projects = [
-  ['E-Commerce Product Website','Product listing with search, category filtering, a shopping cart UI and a fully responsive layout.',['HTML','CSS','JavaScript','Tailwind CSS'],'','from-indigo-500 to-indigo-400'],
-  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="./images/portpholio.png"/>','from-indigo-700 to-indigo-500'],
+  ['Real Estate Website','Modern real estate platform featuring property listings, advanced search, location-based filtering, property details, and a responsive design for seamless browsing across all devices.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="./images/projects/realstate.png','from-indigo-500 to-indigo-400'],
+  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="./images/projects/portpholio.png>','from-indigo-700 to-indigo-500'],
   ['AquaCare Tank Cleaning Website','Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',['HTML','CSS','JavaScript','Tailwind CSS'],'💧','from-indigo-400 to-indigo-700'],
   ['WordPress Business Website','Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',['WordPress','Responsive Design','SEO Basics'],'🌐','from-indigo-400 to-indigo-600']
 ];
