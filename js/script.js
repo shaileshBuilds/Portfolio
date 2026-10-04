@@ -23,8 +23,9 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
       ['HTML','CSS','JavaScript','Tailwind CSS'],
       '<img src="images/projects/realstate.png" alt="Real Estate Website" class="w-full h-full object-cover">',
       'from-indigo-500 to-indigo-400',
-      'https://github.com/shaileshBuilds/vastora-realty',
-      'https://shaileshbuilds.github.io/vastora-realty/'
+      'https://shaileshbuilds.github.io/vastora-realty/',
+      'https://github.com/shaileshBuilds/vastora-realty'
+      
     ],
   
     [
