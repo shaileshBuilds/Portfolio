@@ -2,107 +2,88 @@
 
 <img src="images/banner.svg" alt="Shailesh Chauhan portfolio banner" width="100%">
 
+<div align="center">
+
+# 👨‍💻 SHAILЕSH CHAUHAN — PORTFOLIO
+
+### 🚀 Web Developer • UI Designer • Frontend Enthusiast
+
+<p>
+  A modern, responsive and interactive personal portfolio designed to showcase
+  skills, projects, experience and creative frontend work.
+</p>
+
 <br>
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-22d3ee?style=for-the-badge)
-![No Build](https://img.shields.io/badge/Build_step-None-success?style=for-the-badge)
+<a href="https://shaileshbuilds.github.io/Portfolio/" target="_blank">
+  <img src="https://img.shields.io/badge/🌐%20LIVE%20PORTFOLIO-Visit%20Website-6366F1?style=for-the-badge&labelColor=111827" />
+</a>
 
-**A responsive, animated personal portfolio with 3D effects.**
+<a href="https://github.com/shaileshBuilds/Portfolio" target="_blank">
+  <img src="https://img.shields.io/badge/💻%20SOURCE%20CODE-GitHub-111827?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
-[🚀 Quick start](#-run-locally) · [🖼️ Add images](#️-add-your-images) · [🎨 Customize](#-customize) · [🌐 Deploy](#-deploy-free)
+<br><br>
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Responsive-Design-6366F1?style=for-the-badge"/>
 
 </div>
 
 ---
 
-## 🧭 Page flow
+# ✨ About The Project
 
-```mermaid
-flowchart LR
-  A[🏠 Home] --> B[👤 About]
-  B --> C[🛣️ Journey]
-  C --> D[🧠 Skills]
-  D --> E[💼 Projects]
-  E --> F[🖼️ Gallery]
-  F --> G[🛠️ Services]
-  G --> H[📅 Experience]
-  H --> I[✉️ Contact]
-```
+This is my personal **interactive web portfolio**, created to present my development skills, projects, experience, services and professional journey in a modern visual format.
 
-## ✨ Features
+Instead of using a simple static portfolio layout, the website focuses on:
 
-| 🎬 Animations | 🧊 3D effects | 🖼️ Images | 🎨 Theme |
-|---|---|---|---|
-| Typing effect | Tilt photo frame | Profile photo slot | 7 accent colors |
-| Animated counters | Tilting cards | Project screenshots | Dark / light mode |
-| Skill bars | Floating info boxes | 6-slot gallery | Remembers your choice |
-| Scroll reveal and progress bar | Light-shine on hover | Safe placeholders | Cursor glow |
+- 🧊 3D interactions
+- ✨ Smooth animations
+- 🎬 Scroll reveal effects
+- 🎨 Custom accent themes
+- 🌙 Dark / Light mode
+- 💻 Responsive layouts
+- 🖼️ Project and gallery showcases
+- ⚡ Interactive UI components
 
-## 📁 Folder structure
+The goal is to create a portfolio that feels more like an **interactive digital experience** than a traditional resume website.
 
-```
-shailesh-portfolio/
-├── index.html              # Page structure and sections
-├── css/
-│   └── style.css           # Custom styles, 3D and animations
-├── js/
-│   ├── tailwind-config.js  # Theme colors, accent color, dark mode default
-│   └── script.js           # Content data and all interactions
-└── images/
-    └── shailesh chauhan .pdf   # Resume (used by the Resume button)
-```
+---
 
-## 🚀 Run locally
+# 🖥️ Live Preview
 
-1. Unzip the project.
-2. Double-click `index.html`.
+<div align="center">
 
-An internet connection is needed because Tailwind CSS and Google Fonts load from a CDN.
+### 🚀 Explore the Portfolio
 
-## 🖼️ Add your images
+<a href="https://shaileshbuilds.github.io/Portfolio/">
 
-Put images in the `images/` folder with these exact names. Any image that is missing shows a colored placeholder, so nothing breaks.
+<img src="https://img.shields.io/badge/OPEN%20LIVE%20PORTFOLIO-6366F1?style=for-the-badge&logo=googlechrome&logoColor=white"/>
 
-| Image | File name |
-|---|---|
-| Profile photo (hero) | `images/profile.webp` (also works with `.png`, just change the name in `index.html`) |
-| Project screenshots | `images/project-1.jpg` to `images/project-4.jpg` |
-| Gallery (6 slots) | `images/gallery-1.jpg` to `images/gallery-6.jpg` |
+</a>
 
-Tip: a transparent-background cut-out (PNG or WebP) looks best, because the glowing frame shows behind you. Crop it to about 1:1.08 (slightly taller than wide), with your head near the top. The "Preview your photo" button under the hero lets you test an image instantly without saving it.
+</div>
 
-## 🎨 Customize
+---
 
-**Text, projects and journey**
-- Hero text, About, Services, Experience and Contact: edit `index.html`.
-- Projects (title, description, tech, links) and Journey steps: edit the `projects` and `journey` lists in `js/script.js`.
-- Skill bar percentages: edit the skills list near the bottom of `js/script.js`.
+# 🎨 Design Concept
 
-**Colors**
-- Click the dots at the bottom-right of the site to try an accent color.
-- To set a permanent default, change `190` in `js/tailwind-config.js` (this is the color hue).
+The portfolio follows a modern **3D-inspired developer UI** with interactive visual elements.
 
-| Orange | Gold | Green | Cyan | Blue | Violet | Pink |
-|---|---|---|---|---|---|---|
-| 25 | 45 | 150 | 190 | 220 | 265 | 330 |
+### 🧊 3D Experience
 
-**Links**
-- Replace the placeholder LinkedIn, GitHub, email and project Live Demo / GitHub URLs with your own.
-
-## 🌐 Deploy (free)
-
-- **GitHub Pages:** push the folder to a repo, then Settings, Pages, deploy from the `main` branch.
-- **Netlify:** drag and drop the folder at app.netlify.com/drop.
-- **Vercel:** import the repo and deploy. No settings are needed.
-
-## 🧱 Tech stack
-
-HTML5, Tailwind CSS (CDN), JavaScript (ES6), Google Fonts (Inter and Space Grotesk).
-
-## 📬 Contact
-
-**Shailesh Chauhan**, Frontend / Web Developer, Lucknow, Uttar Pradesh, India
- portpholio link : https://shaileshbuilds.github.io/Portfolio/
+```text
+              ┌─────────────────────┐
+              │     YOUR PROFILE    │
+              │                     │
+              │      🧑‍💻           │
+              │                     │
+              │   Interactive UI    │
+              └─────────────────────┘
+                       ↕
+                Tilt + Motion
+                       ↕
+              Hover + Shine Effects
