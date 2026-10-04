@@ -42,7 +42,7 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
       'FRESHMART – Grocery E-Commerce Website',
       'Premium grocery e-commerce website with responsive design, product search, filtering, cart, wishlist, offers, and interactive shopping functionality.',
       ['HTML','CSS3','JavaScript','Tailwind CSS','local storage','lucid icons'],
-      '<img src="/images/projects/freshmart_grosary.png" alt="e-commerce website" class="w-full h-full object-cover">',
+      '<img src="images/projects/freshmart_grosary.png" alt="e-commerce website" class="w-full h-full object-cover">',
       'from-indigo-400 to-indigo-700',
       'https://shaileshbuilds.github.io/FRESHMART/',
       'https://github.com/shaileshBuilds/FRESHMART'
