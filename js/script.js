@@ -16,25 +16,120 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
 ['Basic PHP','Basic Node.js','Basic MongoDB','MS Office / Excel','AI Tools & Prompt Writing'].forEach(s =>
   $('#basic').insertAdjacentHTML('beforeend', `<span class="${chip}bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:-translate-y-0.5 transition">${s}</span>`));
 
-const projects = [
-  ['Real Estate Website','Modern real estate platform featuring property listings, advanced search, location-based filtering, property details, and a responsive design for seamless browsing across all devices.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="./images/projects/realstate.png','from-indigo-500 to-indigo-400'],
-  ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="./images/projects/portpholio.png>','from-indigo-700 to-indigo-500'],
-  ['AquaCare Tank Cleaning Website','Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',['HTML','CSS','JavaScript','Tailwind CSS'],'💧','from-indigo-400 to-indigo-700'],
-  ['WordPress Business Website','Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',['WordPress','Responsive Design','SEO Basics'],'🌐','from-indigo-400 to-indigo-600']
-];
-projects.forEach((p,i) => $('#proj').insertAdjacentHTML('beforeend', `
-<article class="card3d tilt relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900"><div class="shine"></div>
-  <div class="relative h-44 overflow-hidden bg-gradient-to-br ${p[4]} flex items-center justify-center text-6xl" role="img" aria-label="${p[0]} preview">${p[3]}<img src="images/project-${i+1}.jpg" alt="${p[0]} screenshot" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div>
-  <div class="p-5">
-    <h3 class="font-semibold text-lg text-slate-900 dark:text-white">${p[0]}</h3>
-    <p class="mt-2 text-sm leading-relaxed">${p[1]}</p>
-    <div class="mt-3 flex flex-wrap gap-1.5">${p[2].map(t => `<span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800">${t}</span>`).join('')}</div>
-    <div class="mt-5 flex gap-3">
-      <a href="https://shaileshbuilds.github.io/Portfolio/" data-demo class="px-4 py-2 text-sm rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium">Live Demo</a>
-      <a href="https://github.com/shaileshBuilds/Portfolio" data-gh class="px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+  const projects = [
+    [
+      'Real Estate Website',
+      'Modern real estate platform featuring property listings, advanced search, location-based filtering, property details, and a responsive design for seamless browsing across all devices.',
+      ['HTML','CSS','JavaScript','Tailwind CSS'],
+      '<img src="images/projects/realstate.png" alt="Real Estate Website" class="w-full h-full object-cover">',
+      'from-indigo-500 to-indigo-400',
+      'https://github.com/shaileshBuilds/vastora-realty',
+      'https://shaileshbuilds.github.io/vastora-realty/'
+    ],
+  
+    [
+      'Personal Portfolio Website',
+      'Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',
+      ['HTML','CSS','JavaScript','Tailwind CSS'],
+      '<img src="images/projects/portpholio.png" alt="Portfolio Website" class="w-full h-full object-cover">',
+      'from-indigo-700 to-indigo-500',
+      'https://shaileshbuilds.github.io/Portfolio/',
+      'https://github.com/shaileshBuilds/Portfolio'
+    ],
+  
+    [
+      'AquaCare Tank Cleaning Website',
+      'Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',
+      ['HTML','CSS','JavaScript','Tailwind CSS'],
+      '💧',
+      'from-indigo-400 to-indigo-700',
+      '#',
+      '#'
+    ],
+  
+    [
+      'WordPress Business Website',
+      'Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',
+      ['WordPress','Responsive Design','SEO Basics'],
+      '🌐',
+      'from-indigo-400 to-indigo-600',
+      '#',
+      '#'
+    ]
+  ];
+  
+  projects.forEach((p,i) => $('#proj').insertAdjacentHTML('beforeend', `
+  <article class="card3d tilt relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+    
+    <div class="shine"></div>
+  
+    <div class="relative h-44 overflow-hidden bg-gradient-to-br ${p[4]} flex items-center justify-center text-6xl"
+         role="img"
+         aria-label="${p[0]} preview">
+         
+      ${p[3]}
     </div>
-  </div>
-</article>`));
+  
+    <div class="p-5">
+      <h3 class="font-semibold text-lg text-slate-900 dark:text-white">
+        ${p[0]}
+      </h3>
+  
+      <p class="mt-2 text-sm leading-relaxed">
+        ${p[1]}
+      </p>
+  
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        ${p[2].map(t => `
+          <span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800">
+            ${t}
+          </span>
+        `).join('')}
+      </div>
+  
+      <div class="mt-5 flex gap-3">
+  
+        <a href="${p[5]}"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-demo
+           class="px-4 py-2 text-sm rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium">
+           Live Demo
+        </a>
+  
+        <a href="${p[6]}"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-gh
+           class="px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">
+           GitHub
+        </a>
+  
+      </div>
+    </div>
+  
+  </article>
+  `));
+
+// const projects = [
+//   ['Real Estate Website','Modern real estate platform featuring property listings, advanced search, location-based filtering, property details, and a responsive design for seamless browsing across all devices.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="/images/projects/realstate.png/>','from-indigo-500 to-indigo-400'],
+//   ['Personal Portfolio Website','Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',['HTML','CSS','JavaScript','Tailwind CSS'],'<img src="/images/projects/portpholio.png">','from-indigo-700 to-indigo-500'],
+//   ['AquaCare Tank Cleaning Website','Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',['HTML','CSS','JavaScript','Tailwind CSS'],'💧','from-indigo-400 to-indigo-700'],
+//   ['WordPress Business Website','Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',['WordPress','Responsive Design','SEO Basics'],'🌐','from-indigo-400 to-indigo-600']
+// ];
+// projects.forEach((p,i) => $('#proj').insertAdjacentHTML('beforeend', `
+// <article class="card3d tilt relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900"><div class="shine"></div>
+//   <div class="relative h-44 overflow-hidden bg-gradient-to-br ${p[4]} flex items-center justify-center text-6xl" role="img" aria-label="${p[0]} preview">${p[3]}<img src="images/project-${i+1}.jpg" alt="${p[0]} screenshot" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div>
+//   <div class="p-5">
+//     <h3 class="font-semibold text-lg text-slate-900 dark:text-white">${p[0]}</h3>
+//     <p class="mt-2 text-sm leading-relaxed">${p[1]}</p>
+//     <div class="mt-3 flex flex-wrap gap-1.5">${p[2].map(t => `<span class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-800">${t}</span>`).join('')}</div>
+//     <div class="mt-5 flex gap-3">
+//       <a href="https://shaileshbuilds.github.io/Portfolio/" data-demo class="px-4 py-2 text-sm rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium">Live Demo</a>
+//       <a href="https://github.com/shaileshBuilds/Portfolio" data-gh class="px-4 py-2 text-sm rounded-lg border border-slate-300 dark:border-slate-700 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+//     </div>
+//   </div>
+// </article>`));
 
 [['Responsive Website Development','Sites that work smoothly on mobile, tablet and desktop.'],['Frontend Development','Clean, maintainable HTML, CSS and JavaScript.'],['Landing Page Development','Focused pages designed to convert visitors.'],['WordPress Website Development','Business sites on WordPress with custom layouts.'],['Website UI Development','Tidy, consistent interfaces with good spacing and hierarchy.'],['Website Maintenance','Updates, fixes and small improvements for existing sites.']]
 .forEach(s => $('#svc').insertAdjacentHTML('beforeend', `<div class="card3d tilt relative p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"><div class="shine"></div><h3 class="font-semibold text-slate-900 dark:text-white">${s[0]}</h3><p class="mt-2 text-sm">${s[1]}</p></div>`));
