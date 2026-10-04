@@ -39,24 +39,24 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
     ],
   
     [
-      'AquaCare Tank Cleaning Website',
-      'Responsive service-business site with service sections, booking/contact CTA, and WhatsApp and Call buttons.',
-      ['HTML','CSS','JavaScript','Tailwind CSS'],
-      '💧',
+      'FRESHMART – Grocery E-Commerce Website',
+      'Premium grocery e-commerce website with responsive design, product search, filtering, cart, wishlist, offers, and interactive shopping functionality.',
+      ['HTML','CSS3','JavaScript','Tailwind CSS','local storage','lucid icons'],
+      '<img src="/images/projects/freshmart_grosary.png" alt="e-commerce website" class="w-full h-full object-cover">',
       'from-indigo-400 to-indigo-700',
-      '#',
-      '#'
+      'https://shaileshbuilds.github.io/FRESHMART/',
+      'https://github.com/shaileshBuilds/FRESHMART'
     ],
   
-    [
-      'WordPress Business Website',
-      'Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',
-      ['WordPress','Responsive Design','SEO Basics'],
-      '🌐',
-      'from-indigo-400 to-indigo-600',
-      '#',
-      '#'
-    ]
+    // [
+    //   'WordPress Business Website',
+    //   'Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',
+    //   ['WordPress','Responsive Design','SEO Basics'],
+    //   '🌐',
+    //   'from-indigo-400 to-indigo-600',
+    //   '#',
+    //   '#'
+    // ]
   ];
   
   projects.forEach((p,i) => $('#proj').insertAdjacentHTML('beforeend', `
