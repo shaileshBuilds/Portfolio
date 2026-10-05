@@ -16,17 +16,17 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
 ['Basic PHP','Basic Node.js','Basic MongoDB','MS Office / Excel','AI Tools & Prompt Writing'].forEach(s =>
   $('#basic').insertAdjacentHTML('beforeend', `<span class="${chip}bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:-translate-y-0.5 transition">${s}</span>`));
 
-  const projects = [
+  const projects = [  [
+    'FRESHMART – Grocery E-Commerce Website',
+    'Premium grocery e-commerce website with responsive design, product search, filtering, cart, wishlist, offers, and interactive shopping functionality.',
+    ['HTML','CSS3','JavaScript','Tailwind CSS','local storage','lucid icons'],
+    '<img src="images/projects/freshmart_grosary.png" alt="e-commerce website" class="w-full h-full object-cover">',
+    'from-indigo-400 to-indigo-700',
+    'https://shaileshbuilds.github.io/FRESHMART/',
+    'https://github.com/shaileshBuilds/FRESHMART'
+  ],
 
-    [
-      'Personal Portfolio Website',
-      'Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',
-      ['HTML','CSS','JavaScript','Tailwind CSS'],
-      '<img src="images/projects/portpholio.png" alt="Portfolio Website" class="w-full h-full object-cover">',
-      'from-indigo-700 to-indigo-500',
-      'https://shaileshbuilds.github.io/Portfolio/',
-      'https://github.com/shaileshBuilds/Portfolio'
-    ],
+   
     [
       'Real Estate Website',
       'Modern real estate platform featuring property listings, advanced search, location-based filtering, property details, and a responsive design for seamless browsing across all devices.',
@@ -37,16 +37,16 @@ const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
       'https://github.com/shaileshBuilds/vastora-realty'
       
     ],
-  
     [
-      'FRESHMART – Grocery E-Commerce Website',
-      'Premium grocery e-commerce website with responsive design, product search, filtering, cart, wishlist, offers, and interactive shopping functionality.',
-      ['HTML','CSS3','JavaScript','Tailwind CSS','local storage','lucid icons'],
-      '<img src="images/projects/freshmart_grosary.png" alt="e-commerce website" class="w-full h-full object-cover">',
-      'from-indigo-400 to-indigo-700',
-      'https://shaileshbuilds.github.io/FRESHMART/',
-      'https://github.com/shaileshBuilds/FRESHMART'
+      'Personal Portfolio Website',
+      'Responsive portfolio with mobile menu toggle, smooth navigation and a contact section.',
+      ['HTML','CSS','JavaScript','Tailwind CSS'],
+      '<img src="images/projects/portpholio.png" alt="Portfolio Website" class="w-full h-full object-cover">',
+      'from-indigo-700 to-indigo-500',
+      'https://shaileshbuilds.github.io/Portfolio/',
+      'https://github.com/shaileshBuilds/Portfolio'
     ],
+  
   
     // 
     //   'WordPress Business Website',
