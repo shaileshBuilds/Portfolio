@@ -10,12 +10,119 @@ $('#mobile').onclick = e => { if (e.target.tagName === 'A') { $('#mobile').class
 $('#theme').onclick = () => { document.documentElement.classList.toggle('dark'); };
 $('#yr').textContent = new Date().getFullYear();
 
-const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
-['HTML5','CSS3','JavaScript','Tailwind CSS','Bootstrap','Responsive Web Design','WordPress','Git & GitHub'].forEach(s =>
-  $('#core').insertAdjacentHTML('beforeend', `<span class="${chip}bg-indigo-50 dark:bg-indigo-950/40 border-indigo-200 dark:border-indigo-900 text-indigo-700 dark:text-indigo-300 hover:-translate-y-0.5 transition">${s}</span>`));
-['Basic PHP','Basic Node.js','Basic MongoDB','MS Office / Excel','AI Tools & Prompt Writing'].forEach(s =>
-  $('#basic').insertAdjacentHTML('beforeend', `<span class="${chip}bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:-translate-y-0.5 transition">${s}</span>`));
+// const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
+// ['HTML5','CSS3','JavaScript','Tailwind CSS','Bootstrap','Responsive Web Design','WordPress','Git & GitHub'].forEach(s =>
+//   $('#core').insertAdjacentHTML('beforeend', `<span class="${chip}bg-indigo-50 dark:bg-indigo-950/40 border-indigo-200 dark:border-indigo-900 text-indigo-700 dark:text-indigo-300 hover:-translate-y-0.5 transition">${s}</span>`));
+// ['Basic PHP','Basic Node.js','Basic MongoDB','MS Office / Excel','AI Tools & Prompt Writing'].forEach(s =>
+//   $('#basic').insertAdjacentHTML('beforeend', `<span class="${chip}bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:-translate-y-0.5 transition">${s}</span>`));
 
+const chip = 'px-3.5 py-2 rounded-lg text-sm font-medium border ';
+
+const skillDetails = {
+  'HTML5': 'Semantic HTML, forms and clean website structure.',
+  'CSS3': 'Responsive design, Flexbox, Grid and animations.',
+  'JavaScript': 'DOM, events, APIs and interactive web features.',
+  'Tailwind CSS': 'Utility-first CSS for modern responsive UI.',
+  'Bootstrap': 'Responsive components and grid system.',
+  'Responsive Web Design': 'Mobile-first layouts for all screen sizes.',
+  'WordPress': 'Website customization and basic theme management.',
+  'Git & GitHub': 'Version control, repositories and deployment.',
+
+  'Basic PHP': 'Basic syntax, forms and server-side concepts.',
+  'Basic Node.js': 'Runtime, modules and backend concepts.',
+  'Basic MongoDB': 'Collections, documents and basic CRUD.',
+  'MS Office / Excel': 'Formulas, data handling and reports.',
+  'AI Tools & Prompt Writing': 'AI tools and effective prompt creation.'
+};
+
+
+// CORE SKILLS
+[
+  'HTML5',
+  'CSS3',
+  'JavaScript',
+  'Tailwind CSS',
+  'Bootstrap',
+  'Responsive Web Design',
+  'WordPress',
+  'Git & GitHub'
+].forEach(s => {
+
+  $('#core').insertAdjacentHTML('beforeend', `
+    <div class="skill-card">
+
+      <div class="skill-card-inner">
+
+        <div class="skill-card-front ${chip}
+          bg-indigo-50 dark:bg-indigo-950/40
+          border-indigo-200 dark:border-indigo-900
+          text-indigo-700 dark:text-indigo-300">
+
+          ${s}
+
+        </div>
+
+        <div class="skill-card-back">
+
+          <div>
+            <strong>${s}</strong>
+
+            <span>
+              ${skillDetails[s]}
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  `);
+
+});
+
+
+// BASIC / FAMILIAR
+[
+  'Basic PHP',
+  'Basic Node.js',
+  'Basic MongoDB',
+  'MS Office / Excel',
+  'AI Tools & Prompt Writing'
+].forEach(s => {
+
+  $('#basic').insertAdjacentHTML('beforeend', `
+    <div class="skill-card basic-card">
+
+      <div class="skill-card-inner">
+
+        <div class="skill-card-front ${chip}
+          bg-white dark:bg-slate-900
+          border-slate-200 dark:border-slate-700
+          text-slate-700 dark:text-slate-300">
+
+          ${s}
+
+        </div>
+
+        <div class="skill-card-back">
+
+          <div>
+            <strong>${s}</strong>
+
+            <span>
+              ${skillDetails[s]}
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  `);
+
+});
   const projects = [  [
     'FRESHMART – Grocery E-Commerce Website',
     'Premium grocery e-commerce website with responsive design, product search, filtering, cart, wishlist, offers, and interactive shopping functionality.',

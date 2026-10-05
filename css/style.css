@@ -734,3 +734,103 @@ html:not(.dark) body {
         transform: translateX(105vw)
     }
 }
+
+
+
+/* ................................................. */
+
+/* =========================================
+   SKILL FLIP EFFECT
+   NEW CODE - DO NOT DELETE OLD CSS
+========================================= */
+
+.skill-card {
+    width: 158px;
+    height: 76px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .skill-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.65s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .skill-card:hover .skill-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .skill-card-front,
+  .skill-card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 14px;
+    box-sizing: border-box;
+  
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* FRONT */
+  .skill-card-front {
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  /* BACK */
+  .skill-card-back {
+    transform: rotateY(180deg);
+  
+    padding: 10px;
+    text-align: center;
+  
+    border: 1px solid rgba(99, 102, 241, 0.6);
+  
+    background: linear-gradient(
+      135deg,
+      #0f172a,
+      #1e293b
+    );
+  
+    color: white;
+  }
+  
+  /* Back title */
+  .skill-card-back strong {
+    display: block;
+    color: #67e8f9;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  
+  /* Back description */
+  .skill-card-back span {
+    display: block;
+    color: #cbd5e1;
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  
