@@ -155,15 +155,15 @@ const skillDetails = {
     ],
   
   
-    // 
-    //   'WordPress Business Website',
-    //   'Custom-layout business site with service pages, contact form, responsive design and SEO-friendly structure.',
-    //   ['WordPress','Responsive Design','SEO Basics'],
-    //   '🌐',
-    //   'from-indigo-400 to-indigo-600',
-    //   '#',
-    //   '#'
-    // ]
+    [
+      'ResumeCraft – Resume Builder',
+      'Modern resume builder platform with 50+ professional templates, visual resume customization, ATS-focused tools, AI-assisted writing, cover letter creation, responsive design, and PDF-ready resume workflows.',
+      ['HTML5','CSS3','JavaScript','Tailwind CSS','local storage','lucide icons'],
+      '🌐',
+      'from-indigo-400 to-indigo-600',
+      'https://shaileshbuilds.github.io/Resume_Builder/',
+  'https://github.com/shaileshBuilds/Resume_Builder'
+    ]
   ];
   
   projects.forEach((p,i) => $('#proj').insertAdjacentHTML('beforeend', `
